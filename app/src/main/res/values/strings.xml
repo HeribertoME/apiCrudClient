@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">API Crud Client</string>
+    <string name="registrar">Registrar</string>
+    <string name="form_register_name">Nombre</string>
+    <string name="form_register_email">Correo electrónico</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="form_register_confirm_password">Confirmar contraseña</string>
+    <string name="form_register_gender">Género</string>
+    <string name="form_register_gender_woman">Mujer</string>
+    <string name="form_register_gender_man">Hombre</string>
+    <string name="form_register_gender_woman_value">woman</string>
+    <string name="form_register_gender_man_value">man</string>
+    <string name="error_field_required">Campo requerido</string>
+    <string name="error_invalid_email">Correo eletrónico inválido</string>
+    <string name="error_invalid_password">Contraseña inválida</string>
+    <string name="error_password_confirmation">La contraseña no coincide</string>
 </resources>

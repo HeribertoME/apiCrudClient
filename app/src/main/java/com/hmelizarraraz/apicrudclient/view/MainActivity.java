@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements IMainView {
     private RecyclerView rvUsers;
     private FloatingActionButton fabAdd;
     private ProgressBar progressBar;
+    private Toolbar toolbar;
 
     private IMainPresenter presenter;
 
@@ -38,7 +40,12 @@ public class MainActivity extends AppCompatActivity implements IMainView {
         rvUsers     = findViewById(R.id.rvUsers);
         fabAdd      = findViewById(R.id.fabAdd);
         progressBar = findViewById(R.id.progressBar);
-        
+        toolbar     = findViewById(R.id.toolbar);
+
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

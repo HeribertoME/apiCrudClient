@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.UserDetail" />
-        <activity android:name=".view.AddUserActivity"></activity>
+        <activity android:name=".view.AddUserActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>
