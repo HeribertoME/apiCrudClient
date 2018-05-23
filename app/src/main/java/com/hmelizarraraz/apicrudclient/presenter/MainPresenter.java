@@ -25,12 +25,16 @@ public class MainPresenter implements IMainPresenter, IMainInteractor.OnUserList
 
     @Override
     public void getUsersList() {
-        interactor.getUsersFromAPI(context, this);
+        if (view != null) {
+            view.showProgressBar(true);
+            interactor.getUsersFromAPI(context, this);
+        }
     }
 
     @Override
     public void onGetUsersSuccess(ArrayList<User> users) {
         if (view != null){
+            view.showProgressBar(false);
             view.generateLinearLayoutVertical();
             view.initializeAdapter(view.createAdapter(users));
         }
@@ -39,6 +43,7 @@ public class MainPresenter implements IMainPresenter, IMainInteractor.OnUserList
     @Override
     public void onError(String err) {
         if (view != null) {
+            view.showProgressBar(false);
             view.showError(err);
         }
     }

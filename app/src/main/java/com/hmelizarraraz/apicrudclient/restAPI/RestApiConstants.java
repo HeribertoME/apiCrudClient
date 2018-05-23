@@ -2,7 +2,7 @@ package com.hmelizarraraz.apicrudclient.restAPI;
 
 public class RestApiConstants {
 
-    public static final String ROOT_URL = "http://192.168.5.190/";
+    public static final String ROOT_URL = "https://basiccrud.herokuapp.com/";
 
     // Users
     static final String URL_GET_USERS           = "users";

@@ -14,4 +14,7 @@ public interface IMainView {
     void initializeAdapter(UserAdapter adapter);
     void showError(String err);
 
+    void showProgressBar(boolean show);
+    void addUser();
+
 }
