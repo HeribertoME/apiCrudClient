@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements IMainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // UI
+        // UI References
         rvUsers     = findViewById(R.id.rvUsers);
         fabAdd      = findViewById(R.id.fabAdd);
         progressBar = findViewById(R.id.progressBar);

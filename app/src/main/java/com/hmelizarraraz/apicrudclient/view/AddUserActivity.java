@@ -21,7 +21,7 @@ import com.hmelizarraraz.apicrudclient.view.interfaces.IAddUserView;
 
 public class AddUserActivity extends AppCompatActivity implements IAddUserView {
 
-    // UI
+    // Elementos UI
     private TextInputLayout tilName, tilEmail, tilPassword, tilConfirmPassword;
     private EditText etName, etEmail, etPassword, etConfirmPassword;
     private Button btnSend;
@@ -39,7 +39,7 @@ public class AddUserActivity extends AppCompatActivity implements IAddUserView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user);
 
-        // UI References
+        // Referencias UI
         toolbar = findViewById(R.id.toolbar);
         etName              = findViewById(R.id.tiet_name);
         tilName             = findViewById(R.id.til_name);

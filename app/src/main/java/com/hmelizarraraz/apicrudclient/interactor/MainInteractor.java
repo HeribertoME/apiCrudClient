@@ -62,12 +62,46 @@ public class MainInteractor implements IMainInteractor {
     }
 
     @Override
-    public void getUsersFromDB() {
+    public void getUsersFromDB(Context context, OnUserListener listener) {
         // TODO Obtener usuarios de base de datos sqlite
     }
 
     @Override
-    public void getUsersFromDummy() {
-        // TODO Genera usuarios dummy
+    public void getUsersFromDummy(Context context, OnUserListener listener) {
+        ArrayList<User> users = new ArrayList<>();
+
+        User user1 = new User();
+        User user2 = new User();
+        User user3 = new User();
+        User user4 = new User();
+        User user5 = new User();
+
+        user1.setId(1);
+        user1.setName("DUMMY 1");
+        user1.setEmail("dummy1@mail.com");
+        users.add(user1);
+
+        user2.setId(2);
+        user2.setName("DUMMY 2");
+        user2.setEmail("dummy2@mail.com");
+        users.add(user2);
+
+        user3.setId(3);
+        user3.setName("DUMMY 3");
+        user3.setEmail("dummy3@mail.com");
+        users.add(user3);
+
+        user4.setId(4);
+        user4.setName("DUMMY 4");
+        user4.setEmail("dummy4@mail.com");
+        users.add(user4);
+
+        user5.setId(5);
+        user5.setName("DUMMY 5");
+        user5.setEmail("dummy5@mail.com");
+        users.add(user5);
+
+        listener.onGetUsersSuccess(users);
     }
+
 }
