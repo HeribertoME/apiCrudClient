@@ -12,6 +12,9 @@ public class User {
     private String updated_at;
     private String deleted_at;
 
+    private String password;
+    private String password_confirmation;
+
     public User() {}
 
     public int getId() {
@@ -84,5 +87,38 @@ public class User {
 
     public void setDeleted_at(String deleted_at) {
         this.deleted_at = deleted_at;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword_confirmation() {
+        return password_confirmation;
+    }
+
+    public void setPassword_confirmation(String password_confirmation) {
+        this.password_confirmation = password_confirmation;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", genre='" + genre + '\'' +
+                ", verified='" + verified + '\'' +
+                ", admin='" + admin + '\'' +
+                ", created_at='" + created_at + '\'' +
+                ", updated_at='" + updated_at + '\'' +
+                ", deleted_at='" + deleted_at + '\'' +
+                ", password='" + password + '\'' +
+                ", password_confirmation='" + password_confirmation + '\'' +
+                '}';
     }
 }

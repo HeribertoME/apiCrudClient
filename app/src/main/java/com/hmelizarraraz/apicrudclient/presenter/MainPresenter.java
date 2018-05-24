@@ -41,6 +41,31 @@ public class MainPresenter implements IMainPresenter, IMainInteractor.OnUserList
     }
 
     @Override
+    public void onRegisterSuccess(int id) {
+
+    }
+
+    @Override
+    public void onNameError() {
+
+    }
+
+    @Override
+    public void onEmailError() {
+
+    }
+
+    @Override
+    public void onPasswordError() {
+
+    }
+
+    @Override
+    public void onPasswordConfirmationError() {
+
+    }
+
+    @Override
     public void onError(String err) {
         if (view != null) {
             view.showProgressBar(false);

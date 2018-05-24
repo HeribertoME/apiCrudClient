@@ -13,6 +13,9 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.hmelizarraraz.apicrudclient.R;
+import com.hmelizarraraz.apicrudclient.interactor.AddUserInteractor;
+import com.hmelizarraraz.apicrudclient.presenter.AddUserPresenter;
+import com.hmelizarraraz.apicrudclient.presenter.interfaces.IAddUserPresenter;
 import com.hmelizarraraz.apicrudclient.utils.TextWatcherLabel;
 import com.hmelizarraraz.apicrudclient.view.interfaces.IAddUserView;
 
@@ -89,7 +92,6 @@ public class AddUserActivity extends AppCompatActivity implements IAddUserView {
     @Override
     public void showNameError() {
         tilName.setError(getString(R.string.error_field_required));
-
     }
 
     @Override
@@ -123,12 +125,13 @@ public class AddUserActivity extends AppCompatActivity implements IAddUserView {
     }
 
     @Override
-    public void navigateToMain() {
+    public void navigateToMain(int id) {
+        Toast.makeText(this, "New user add. Id: " + id, Toast.LENGTH_SHORT).show();
         this.finish();
     }
 
     @Override
     public void setUpPresenterRegister() {
-        presenter = new AddUSerPresenter(this, new AddUserInteractor(), getApplicationContext());
+        presenter = new AddUserPresenter(this, new AddUserInteractor(), getApplicationContext());
     }
 }

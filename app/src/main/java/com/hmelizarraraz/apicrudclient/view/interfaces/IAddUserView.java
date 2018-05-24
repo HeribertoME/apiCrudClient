@@ -18,7 +18,7 @@ public interface IAddUserView {
     void signUp(String name, String email, String password,
                 String password_confirmation, String gender);
 
-    void navigateToMain();
+    void navigateToMain(int id);
 
     void setUpPresenterRegister();
 }

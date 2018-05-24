@@ -14,6 +14,13 @@ public interface IMainInteractor {
 
     interface OnUserListener {
         void onGetUsersSuccess(ArrayList<User> users);
+        void onRegisterSuccess(int id);
+
+        void onNameError();
+        void onEmailError();
+        void onPasswordError();
+        void onPasswordConfirmationError();
+
         void onError(String err);
     }
 }
